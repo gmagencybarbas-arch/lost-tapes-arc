@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import { Bodoni_Moda, Outfit } from 'next/font/google';
 import { Haunt } from '@/components/Haunt';
 import { MotionFlag } from '@/components/MotionFlag';
-import { readSiteSettings, themeStyle } from '@/lib/siteSettings';
+import { readSiteSettings } from '@/lib/siteSettings';
+import { themeStyle } from '@/lib/theme';
 import './globals.css';
 
 const display = Bodoni_Moda({
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#170000',
+  themeColor: '#050816',
   width: 'device-width',
   initialScale: 1,
 };

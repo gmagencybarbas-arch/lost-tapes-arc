@@ -1,4 +1,4 @@
-import type { SiteSettings } from '@/lib/siteSettings';
+import type { SiteSettings } from '@/lib/theme';
 
 const NETWORKS = [
   ['instagram', 'Instagram'],

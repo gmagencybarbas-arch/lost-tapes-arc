@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { readAdminSession } from '@/lib/adminSession';
-import { parseSettings, readSiteSettings, writeSiteSettings, type SiteSettings } from '@/lib/siteSettings';
+import { readSiteSettings, writeSiteSettings } from '@/lib/siteSettings';
+import { parseSettings, type SiteSettings } from '@/lib/theme';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';

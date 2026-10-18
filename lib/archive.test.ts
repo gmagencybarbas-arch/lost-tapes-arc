@@ -18,7 +18,7 @@ import {
 import { beginSubmission } from './guard';
 import { TERMS_TEXT, TERMS_VERSION } from './legal';
 import { signReceipt, verifyReceipt } from './receipt';
-import { DEFAULT_SETTINGS, parseSettings } from './siteSettings';
+import { DEFAULT_SETTINGS, parseSettings } from './theme';
 import { validateSubmissionFields } from './submission';
 
 const root = process.cwd();
@@ -276,6 +276,18 @@ describe('admin', () => {
       assert.equal(saved.accent, '#3366ff');
       assert.equal(saved.instagram, 'https://www.instagram.com/losttapes/');
     }
+
+    const legacy = parseSettings({
+      active: true,
+      accent: '#ff003c',
+      buttonFrom: '#ffe56a',
+      buttonTo: '#ff4b2a',
+      instagram: '',
+      tiktok: '',
+      youtube: '',
+    });
+    assert.equal(legacy?.background, '#050816');
+    assert.equal(legacy?.backgroundGlow, '#0057ff');
   });
 
   it('não trata a contagem do Drive como um envio confirmado', () => {
